@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\MainComponent;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    echo 'Pagina de inicio';
-});
+Route::get('/', MainComponent::class);

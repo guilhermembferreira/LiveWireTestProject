@@ -1,3 +1,5 @@
 <div>
-    {{-- If you look to others for fulfillment, you will never truly be fulfilled. --}}
+    <div class="text-center my-5">
+        <img src="{{ asset('assets/images/logo.png')}}" alt="logo" width="128px">
+    </div>
 </div>
