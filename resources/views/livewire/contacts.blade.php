@@ -11,6 +11,10 @@
                 <div class="col">Nomes: {{ $contact->name }}</div>
                 <div class="col">Email: {{ $contact->email }}</div>
                 <div class="col">Telefone: {{ $contact->phone }}</div>
+                <div class="col">
+                    <a href="{{ route('contacts-edit', ['id' => $contact->id])}}" class="btn btn-sm btn-success">Editar</a>
+                    <a href="{{ route('contacts-delete', ['id' => $contact->id])}}" class="btn btn-sm btn-danger">Deletar</a>
+                </div>
             </div>
         </div>
     @endforeach
