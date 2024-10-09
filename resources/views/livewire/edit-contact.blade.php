@@ -1,6 +1,11 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-sm-4">
+
+            <h3>Editar Contactos</h3>
+
+            <hr>
+
             <div class="card p-5">
                 <form wire:submit="update_contact">
 
@@ -23,24 +28,17 @@
                     </div>
 
                     <div class="text-end">
+                        <a href="{{route('home')}}" class="btn btn-outline-danger">Cancelar</a>
                         <button class="btn btn-secondary px-5">Update</button>
                     </div>
-
-                    @if($error)
-                    <div class="alert alert-danger mt-3" x-data="{show: true}" x-show="show"
-                        x-init="setTimeout(() => show = false, 2000)">
-                        {{ $error }}
-                    </div>
-                    @endif
-
-                    @if($success)
-                    <div class="alert alert-success mt-3" x-data="{show: true}" x-show="show"
-                        x-init="setTimeout(() => show = false, 2000)">
-                        {{ $success }}
-                    </div>
-                    @endif
-
                 </form>
+
+                @if(session()->has('error'))
+                    <div class="alert alert-danger mt-3">
+                        {{ session('error') }}
+                    </div>
+                @endif
+
             </div>
         </div>
     </div>
